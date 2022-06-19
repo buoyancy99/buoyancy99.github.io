@@ -14,7 +14,7 @@
         4. Banner Section
         5. About Section
         6. Services Section
-        7. Stats Section
+        7. Research Section
         8. Portfolio Section
         9. Blogs Section
         10. Testimonial Section
@@ -1021,54 +1021,40 @@ section.services .service-item:hover .icon {
 }
 
 
-/*============ 7. Stats Section ============*/
-
-.stats {
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
-    overflow: hidden;
+/*============ 7. Research Section ============*/
+section.research .paper-info {
+    font-size: 16px;
+    font-weight: 450;
 }
 
-.stats:after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #000;
-    z-index: 2;
-    opacity: .60;
+section.research .paper-info a{
+    color: rgb(12, 109, 189);
 }
 
-.stats .single-stat {
-    text-align: center;
-    color: #fff;
-    z-index: 10;
-    position: relative;
+section.research .paper-info heading{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(0, 71, 119);
 }
 
-.stats .single-stat .stat-icon .fa {
-    font-size: 30px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 3px solid #fff;
-}
-
-.stats .single-stat h2 {
-    color: #fff;
-    font-weight: 800;
-}
-
-.stats .single-stat p {
-    font-weight: 600;
+section.research .paper-thumbnail {
     margin-bottom: 30px;
+    padding-right: 10px;
 }
 
+section.research .paper-thumbnail img{
+    width: 90%;
+    height: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-radius:10px;
+}
+
+section.research .paper-thumbnail:hover img{
+    -webkit-box-shadow: 0 5px 30px #e3e3e3;
+    box-shadow: 0 5px 30px #e3e3e3;
+    border-color: #f2f2f2;
+}
 
 /*============ 8. Portfolio Section ============*/
 
