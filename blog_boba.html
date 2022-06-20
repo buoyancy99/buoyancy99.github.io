@@ -9,7 +9,7 @@
         <meta name="description" content="Boyuan Portfolio Template">
         <meta name="author" content="cosmos-themes">
 
-        <title>Boyuan - Portfolio Template</title>
+        <title>Boyuan Blogs - Boba Review</title>
 
         <!-- favicon -->
         <link href="images/favicon.ico" rel="icon" type="image/png">
@@ -37,9 +37,11 @@
 
     <body>
 
+        <!--Preloader Start-->
         <div class="preloader">
             <div class="loader "></div>
         </div>
+        <!--Preloader End-->
 
         <!--Navbar Start-->
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -51,7 +53,7 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link active">Back</a>
+                        <a href="blogs-page.html" class="nav-link active">Back</a>
                     </li>
                 </ul>
             </div>
@@ -62,45 +64,42 @@
             <div id="particles-js"></div>
             <!--Banner Caption-->
             <div class="banner-caption text-center">
-                <h1>Blog List</h1>
+                <h1>Best computer science schools ranked by boba</h1>
                 <div class="bread-crumb mt-10">
                     <a href="index.html">Home</a>
-                    <a href="#">Blogs</a>
+                    <a href="blogs-page.html">Blogs</a>
                 </div>
             </div>
         </section>
 
-        <!--Blog List Section Starts-->
-        <section class="blogs blog-list pt-100 pb-50" data-scroll-index="4">
+        <section class="blog-detail pt-100 pb-100">
             <div class="container">
                 <div class="row">
-                    <!--One blog page-->
-                    <div class="col-lg-4 col-md-6">
-                        <!--Blogs Item-->
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <a href="blog_boba.html">
-                                    <img src="images/blog/img-1.jpg" alt="">
-                                </a>
+                    <!--Blog Content-->
+                    <div class="col-lg-8 offset-lg-2">
+                        <!--Blog Image-->
+                        <div class="blog-image">
+                            <img src="images/blog/blog-big.jpg" alt="">
+                        </div>
+                        <!--Blog Heading-->
+                        <div class="blog-heading">
+                            <h2>Why is boba so important for research?</h2>
+                            <div class="blog-meta">
+                                <span class="date">20 Jun 2022</span>
+                                <span class="by">by Boyuan Chen.</span>
                             </div>
-                            <div class="blog-content">
-                                <h3>The best of web design and web design inspiration</h3>
-                                <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first ...</p>
-                                <div class="blog-meta">
-                                    <span class="more">
-                                        <a href="blog_boba.html">Read More</a>
-                                    </span>
-                                    <span class="date">
-                                        1/April/2018
-                                    </span>
-                                </div>
-                            </div>
+                        </div>
+                        <!--Blog Content-->
+                        <div class="blog-content">
+                            <p>Let's all admit it, boba is vital to the productivity of Asian, if not all, students.</p>
+                            <br>
+                            <p>1. Berkeley</p>
+                            <blockquote>TBD</blockquote>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--Blog List Section End-->
 
         <!--Footer Start-->
         <footer class="pt-50 pb-50">
@@ -165,10 +164,11 @@
         <script>
             //Particles
             particlesJS.load('particles-js', 'js/particles.json', function() {
-                console.log('callback - particles.js config loaded');
+                console.log('particles loaded');
             });
         </script>
 
     </body>
 </html>
+
 
