@@ -1149,6 +1149,21 @@ section.portfolio .portfolio-items .item .item-content .item-overlay h6 {
     letter-spacing: 1px;
 }
 
+section.portfolio .portfolio-items .item .item-content .item-overlay p {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+    opacity: 0;
+    -webkit-transition: .5s all ease;
+    -o-transition: .5s all ease;
+    transition: .5s all ease;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 section.portfolio .portfolio-items .item .item-content .item-overlay .icons .icon {
     -webkit-transform: translateY(10px);
     -ms-transform: translateY(10px);
@@ -1178,6 +1193,7 @@ section.portfolio .portfolio-items .item .item-content .item-overlay .icons .ico
 }
 
 section.portfolio .portfolio-items .item .item-content:hover .item-overlay h6,
+section.portfolio .portfolio-items .item .item-content:hover .item-overlay p,
 section.portfolio .portfolio-items .item .item-content:hover .item-overlay .icons .icon {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);

@@ -50,6 +50,7 @@
                 <!-- LOGO -->
                 <a class="navbar-brand logo" href="index.html">
                     Boyuan
+                    <!-- <img src="images/Boyuan_Stamp.png" style="height: 80px;"> -->
                 </a>
 
                 <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,13 +70,10 @@
                             <a href="#" class="nav-link" data-scroll-nav="2" >Research</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link" data-scroll-nav="3">Works</a>
+                            <a href="#" class="nav-link" data-scroll-nav="3">Projects</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link" data-scroll-nav="4">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-scroll-nav="5">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -121,7 +119,7 @@
                         <!--About Content-->
                         <div class="about-content">
                             <div class="about-heading">
-                                <h2>About Me.</h2>
+                                <h2>About Me</h2>
                                 <span>AI/ML Researcher & Robotics Enthusiast</span>
                             </div>
                             <p>I'm <b>Boyuan Chen (陈博远)</b>. I am currently a second year PhD student at MIT EECS advised by Prof. Russ Tedrake and Prof. Joshua Tenenbaum. I am interested in data driven approaches that enable robots to make intelligent decisions in the real world. I hope to use my knowledge and passion to tackle the most important challenges in the world and free humanities with breakthrough technologies.</p>
@@ -155,7 +153,7 @@
                     </div>
                 </div>
 
-                <!--Paper 1 -->
+                <!--Paper 2 -->
                 <div class="row">
                     <div class="col-md-4">
                         <div class="paper-thumbnail">
@@ -176,9 +174,9 @@
                             <br>
                             <br>
                             <a href="https://buoyancy99.github.io/unsup-3d-keypoints/">webpage</a> |
+                            <a href="https://arxiv.org/abs/2106.07643">paper</a> |
                             <a href="javascript:toggleblock('keypoint3D_abs')">abstract</a> |
                             <a shape="rect" href="javascript:togglebib('keypoint3D')" class="togglebib">bibtex</a> |
-                            <a href="https://arxiv.org/abs/2106.07643">arXiv</a> |
                             <a href="https://github.com/buoyancy99/unsup-3d-keypoints">code</a> |
                             <a href="https://youtu.be/XnRzzxnlMOM">talk video</a>
 
@@ -192,6 +190,57 @@
                             </pre>
                         </div>
                             <p style="text-align: justify;"> <i id="keypoint3D_abs">Learning sensorimotor control policies from high-dimensional images crucially relies on the quality of the underlying visual representations. Prior works show that structured latent space such as visual keypoints often outperforms unstructured representations for robotic control. However, most of these representations, whether structured or unstructured are learned in a 2D space even though the control tasks are usually performed in a 3D environment. In this work, we propose a framework to learn such a 3D geometric structure directly from images in an end-to-end unsupervised manner. The input images are embedded into latent 3D keypoints via a differentiable encoder which is trained to optimize both a multi-view consistency loss and downstream task objective. These discovered 3D keypoints tend to meaningfully capture robot joints as well as object movements in a consistent manner across both time and 3D space. The proposed approach outperforms prior state-of-art methods across a variety of reinforcement learning benchmarks.</i></p>
+                    </div>
+                </div>
+
+                <!--Paper 1 -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="paper-thumbnail">
+                            <a href="https://sites.google.com/view/sapnew/home">
+                                <img src="images/research/sap.png" alt="sym">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="paper-info" id="sap">
+                            <a href="https://sites.google.com/view/sapnew/home">
+                                <heading>Zero-shot Policy Learning with Spatial Temporal Reward Decomposition on Contingency-aware Observation</heading>
+                            </a>
+                            <br>
+                            Boyuan Chen*, Huazhe Xu*, Yang Gao and Trevor Darrell
+                            <br>
+                            International Conference on Robotics and Automation (ICRA) 2021
+                            <br>
+                            <br>
+                            <a href="https://sites.google.com/view/sapnew/home">webpage</a> |
+                            <a href="https://arxiv.org/abs/1910.08143">paper</a> |
+                            <a href="javascript:toggleblock('sap_abs')">abstract</a> |
+                            <a shape="rect" href="javascript:togglebib('sap')" class="togglebib">bibtex</a> |
+                            <a href="https://github.com/buoyancy99/sap">code</a> |
+
+                            <pre xml:space="preserve" style="display:none">
+@article{DBLP:journals/corr/abs-1910-08143,
+    author    = {Huazhe Xu and
+                    Boyuan Chen and
+                    Yang Gao and
+                    Trevor Darrell},
+    title     = {Scoring-Aggregating-Planning: Learning task-agnostic priors from interactions
+                    and sparse rewards for zero-shot generalization},
+    journal   = {CoRR},
+    volume    = {abs/1910.08143},
+    year      = {2019},
+    url       = {http://arxiv.org/abs/1910.08143},
+    eprinttype = {arXiv},
+    eprint    = {1910.08143},
+    timestamp = {Fri, 27 Nov 2020 15:04:16 +0100},
+    biburl    = {https://dblp.org/rec/journals/corr/abs-1910-08143.bib},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+    }
+                            </pre>
+                        </div>
+                            <p style="text-align: justify;"> <i id="sap_abs">It is a long-standing challenge to enable an intelligent agent to learn in one environment and generalize to an unseen environment without further data collection and finetuning. In this paper, we consider a zero shot generalization problem setup that complies with biological intelligent agents' learning and generalization processes. The agent is first presented with previous experiences in the training environment, along with task description in the form of trajectory-level sparse rewards. Later when it is placed in the new testing environment, it is asked to perform the task without any interaction with the testing environment. We find this setting natural for biological creatures and at the same time, challenging for previous methods. Behavior cloning, state-of-art RL along with other zero-shot learning methods perform poorly on this benchmark. Given a set of experiences in the training environment, our method learns a neural function that decomposes the sparse reward into particular regions in a contingency-aware observation as a per step reward. Based on such decomposed rewards, we further learn a dynamics model and use Model Predictive Control (MPC) to obtain a policy. Since the rewards are decomposed to finer-granularity observations, they are naturally generalizable to new environments that are composed of similar basic elements. We demonstrate our method on a wide range of environments, including a classic video game -- Super Mario Bros, as well as a robotic continuous control task. Please refer to the project page for more visualized results.
+                            </i></p>
                     </div>
                 </div>
 
@@ -216,9 +265,9 @@
                             <br>
                             <br>
                             <a href="https://sites.google.com/view/staghuntrpg">webpage</a> |
+                            <a href="https://arxiv.org/abs/2103.04564">paper</a> |
                             <a href="javascript:toggleblock('rpg_abs')">abstract</a> |
                             <a shape="rect" href="javascript:togglebib('rpg')" class="togglebib">bibtex</a> |
-                            <a href="https://arxiv.org/abs/2103.04564">arXiv</a> |
                             <a href="https://github.com/staghuntrpg/RPG">code</a> |
 
                             <pre xml:space="preserve" style="display:none">
@@ -248,29 +297,57 @@
                 <div class="row">
                     <div class="col">
                         <div class="heading text-center">
-                            <h6>Portfolio</h6>
-                            <h2>Work I Have Done</h2>
+                            <h2>My Projects</h2>
                         </div>
                         <div class="portfolio-filter text-center">
                             <ul>
                                 <li class="sel-item" data-filter="*">All</li>
-                                <li data-filter=".design">Web Design</li>
-                                <li data-filter=".application">Applications</li>
-                                <li data-filter=".development">Development</li>
+                                <li data-filter=".competition">Robotics Competition</li>
+                                <li data-filter=".robot">Personal Robots</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="row portfolio-items">
                     <!--Portfolio Item-->
-                    <div class="col-lg-4 col-md-6 item application">
+                    <div class="col-lg-4 col-md-6 item robot">
                         <div class="item-content">
-                            <img src="images/portfolio/img-1.jpg" alt="">
+                            <img src="images/portfolio/robot_kit.jpg" alt="">
                             <div class="item-overlay">
-                                <h6>Application</h6>
+                                <h6>Robomooc Robotics Kit</h6>
+                                <p>I designed it with my friend, Kinsky. We sold it as an education kit to schools. You can ride on it!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Portfolio Item-->
+                    <div class="col-lg-4 col-md-6 item competition">
+                        <div class="item-content">
+                            <img src="images/portfolio/robomaster.jpg" alt="">
+                            <div class="item-overlay">
+                                <h6>Robomaster ICRA challenge</h6>
+                                <p>DJI robomaster robot for ICRA AI Challenge. During my undergrad, I was the captain of the team, leading the development of autonomous algorithms in the robot shooting challenge.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Portfolio Item-->
+                    <div class="col-lg-4 col-md-6 item robot">
+                        <div class="item-content">
+                            <img src="images/portfolio/rover.jpg" alt="">
+                            <div class="item-overlay">
+                                <h6>Autonomous Bogie Rover</h6>
+                                <p>My personal robot that can handle a variety of terrains. I did everything from machanical design, electronics to programming. It uses computer vision to autonomously follow me and avoid obstables.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Portfolio Item-->
+                    <div class="col-lg-4 col-md-6 item competition">
+                        <div class="item-content">
+                            <img src="images/portfolio/frc17.jpg" alt="">
+                            <div class="item-overlay">
+                                <h6>FRC 2017 Robot</h6>
                                 <div class="icons">
                                     <span class="icon link">
-                                        <a href="images/portfolio/img-1.jpg">
+                                        <a href="images/portfolio/frc17.jpg">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </span>
@@ -279,14 +356,14 @@
                         </div>
                     </div>
                     <!--Portfolio Item-->
-                    <div class="col-lg-4 col-md-6 item design">
+                    <div class="col-lg-4 col-md-6 item robot">
                         <div class="item-content">
-                            <img src="images/portfolio/img-2.jpg" alt="">
+                            <img src="images/portfolio/drone.jpg" alt="">
                             <div class="item-overlay">
-                                <h6>Web Design</h6>
+                                <h6>Autonomous Drone</h6>
                                 <div class="icons">
                                     <span class="icon link">
-                                        <a href="images/portfolio/img-2.jpg">
+                                        <a href="images/portfolio/drone.jpg">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </span>
@@ -295,14 +372,14 @@
                         </div>
                     </div>
                     <!--Portfolio Item-->
-                    <div class="col-lg-4 col-md-6 item development">
+                    <div class="col-lg-4 col-md-6 item competition">
                         <div class="item-content">
-                            <img src="images/portfolio/img-3.jpg" alt="">
+                            <img src="images/portfolio/ftc17.jpg" alt="">
                             <div class="item-overlay">
-                                <h6>Application</h6>
+                                <h6>FTC 2017 Robot</h6>
                                 <div class="icons">
                                     <span class="icon link">
-                                        <a href="images/portfolio/img-3.jpg">
+                                        <a href="images/portfolio/ftc17.jpg">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </span>
@@ -311,14 +388,14 @@
                         </div>
                     </div>
                     <!--Portfolio Item-->
-                    <div class="col-lg-4 col-md-6 item design development">
+                    <div class="col-lg-4 col-md-6 item competition">
                         <div class="item-content">
-                            <img src="images/portfolio/img-4.jpg" alt="">
+                            <img src="images/portfolio/frc18.jpg" alt="">
                             <div class="item-overlay">
-                                <h6>Development</h6>
+                                <h6>FRC 2018 Robot</h6>
                                 <div class="icons">
                                     <span class="icon link">
-                                        <a href="images/portfolio/img-4.jpg">
+                                        <a href="images/portfolio/frc18.jpg">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </span>
@@ -327,30 +404,14 @@
                         </div>
                     </div>
                     <!--Portfolio Item-->
-                    <div class="col-lg-4 col-md-6 item development application">
+                    <div class="col-lg-4 col-md-6 item competition">
                         <div class="item-content">
-                            <img src="images/portfolio/img-5.jpg" alt="">
+                            <img src="images/portfolio/ftc16.jpg" alt="">
                             <div class="item-overlay">
-                                <h6>Web Design</h6>
+                                <h6>My first ftc robot</h6>
                                 <div class="icons">
                                     <span class="icon link">
-                                        <a href="images/portfolio/img-5.jpg">
-                                            <i class="fa fa-search"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Portfolio Item-->
-                    <div class="col-lg-4 col-md-6 item application development">
-                        <div class="item-content">
-                            <img src="images/portfolio/img-6.jpg" alt="">
-                            <div class="item-overlay">
-                                <h6>Web Design</h6>
-                                <div class="icons">
-                                    <span class="icon link">
-                                        <a href="images/portfolio/img-6.jpg">
+                                        <a href="images/portfolio/ftc16.jpg">
                                             <i class="fa fa-search"></i>
                                         </a>
                                     </span>
@@ -369,8 +430,8 @@
                 <div class="row">
                     <div class="col text-center">
                         <div class="heading text-center">
+                            <h2>Blog</h2>
                             <h6>Blog</h6>
-                            <h2>Latest News</h2>
                         </div>
                     </div>
                 </div>
@@ -469,126 +530,39 @@
         </section>
         <!--Blog Section End-->
 
-        <!--Testimonials Section Start-->
-        <section class="testimonials pt-100 pb-100" style="background-image: url('images/background/testimonials-bg.jpg')">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 offset-lg-1">
-                        <div class="owl-carousel owl-theme text-center">
-                            <!--Testimonials Item-->
-                            <div class="testimonial-item">
-                                <div class="author-img">
-                                    <img src="images/testimonial/img-1.jpg" alt="">
-                                </div>
-                                <h5>Mr John Doe</h5>
-                                <span>Creative Director</span>
-                                <p>Dolor facilis veritatis doloremque dicta eos Voluptate earum nulla ad et esse Saepe asperiores nisi facere ipsam corporis. Dolorem praesentium tenetur tempore dolorem illum autem? Veritatis fuga quasi sunt tenetur. Expedita id eaque incidunt beatae nesciunt! In similique exercitationem tempore excepturi placeat Nostrum ducimus dicta temporibus quas!</p>
-                            </div>
-                            <!--Testimonials Item-->
-                            <div class="testimonial-item">
-                                <div class="author-img">
-                                    <img src="images/testimonial/img-1.jpg" alt="">
-                                </div>
-                                <h5>Mr John Doe</h5>
-                                <span>Creative Director</span>
-                                <p>Dolor facilis veritatis doloremque dicta eos Voluptate earum nulla ad et esse Saepe asperiores nisi facere ipsam corporis. Dolorem praesentium tenetur tempore dolorem illum autem? Veritatis fuga quasi sunt tenetur. Expedita id eaque incidunt beatae nesciunt! In similique exercitationem tempore excepturi placeat Nostrum ducimus dicta temporibus quas!</p>
-                            </div>
-                            <!--Testimonials Item-->
-                            <div class="testimonial-item">
-                                <div class="author-img">
-                                    <img src="images/testimonial/img-1.jpg" alt="">
-                                </div>
-                                <h5>Mr John Doe</h5>
-                                <span>Creative Director</span>
-                                <p>Dolor facilis veritatis doloremque dicta eos Voluptate earum nulla ad et esse Saepe asperiores nisi facere ipsam corporis. Dolorem praesentium tenetur tempore dolorem illum autem? Veritatis fuga quasi sunt tenetur. Expedita id eaque incidunt beatae nesciunt! In similique exercitationem tempore excepturi placeat Nostrum ducimus dicta temporibus quas!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Testimonials Section End-->
-
-        <!--Contact Section Start-->
-        <section class="contact pt-100 pb-100" data-scroll-index="5">
-            <div class="container">
-                <div class="row">
-                    <div class="col text-center">
-                        <div class="heading">
-                            <h6>Contact</h6>
-                            <h2>Get In Touch</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-10 offset-lg-1">
-                        <!--Contact Form-->
-                        <form id='contact-form' method='POST'><input type='hidden' name='form-name' value='contactForm' />
-                            <div class="row">
-                                <div class="col-md-6 form-group">
-                                    <!--name-->
-                                    <input type="text" class="form-control con-validate" id="contact-name" placeholder="Name" minlength=3 >
-                                </div>
-                                <div class="col-md-6 form-group">
-                                    <!--email-->
-                                    <input type="email" class="form-control con-validate" id="contact-email" placeholder="Email" >
-                                </div>
-                                <div class="col-md-12 form-group">
-                                    <!--message box-->
-                                    <textarea class="form-control con-validate" id="contact-message" placeholder="How can we help you?" rows=6 ></textarea>
-                                </div>
-                                <div class="col-md-12 text-center">
-                                    <!--contact button-->
-                                    <button id="contact-submit" class="mt-30 main-btn">
-                                        Send Message
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Contact Section End-->
-
         <!--Footer Start-->
         <footer class="pt-50 pb-50">
             <div class="container">
-                <div class="row text-center">
+                <!-- <div class="row text-center">
                     <div class="col-md-3 col-sm-6">
-                        <!--Contant Item-->
                         <div class="contact-info">
                             <h5>Boyuan</h5>
                             <p>lorem Ipsum donor sit.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <!--Contant Item-->
                         <div class="contact-info">
                             <h5>Phone No.</h5>
                             <p>(+1) 123 456 7890</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <!--Contant Item-->
                         <div class="contact-info">
                             <h5>Email</h5>
                             <p>info@example.com</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <!--Contant Item-->
                         <div class="contact-info">
                             <h5>Address</h5>
                             <p>123 lorem ipsum New York, USA.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="row text-center">
                     <div class="col-md-12">
-                        <hr>
                         <p class="copy pt-30">
-                            Boyuan Chen&copy; 2022. All Right Reserved.
+                            Boyuan Chen &copy; 2022. All Right Reserved.
                         </p>
                     </div>
                 </div>
@@ -621,6 +595,7 @@
         <script xml:space="preserve">
             hideblock('keypoint3D_abs');
             hideblock('rpg_abs');
+            hideblock('sap_abs');
         </script>
     </body>
 </html>
