@@ -37,7 +37,8 @@ $(window).on("load", function() {
     /*========Portfolio Isotope Setup========*/
     if ($(".portfolio-items").length) {
         var $elements = $(".portfolio-items");
-        $elements.isotope();
+        // $elements.isotope();
+        $elements.isotope({filter: ".robot"});
         $(".portfolio-filter ul li").on("click", function() {
             $(".portfolio-filter ul li").removeClass("sel-item");
             $(this).addClass("sel-item");
