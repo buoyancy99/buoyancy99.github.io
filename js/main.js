@@ -32,7 +32,7 @@ $(window).on("load", function() {
     /*========Preloader Setup========*/
     setTimeout(function(){
         $('.preloader').addClass('loaded');
-    }, 1000);
+    }, 200);
 
     /*========Portfolio Isotope Setup========*/
     if ($(".portfolio-items").length) {
