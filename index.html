@@ -194,6 +194,74 @@
           </div>
         </div>
 
+        <!--Paper 3 -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="paper-thumbnail">
+              <a href="https://nlmap-saycan.github.io/">
+                <img src="images/research/nlmap.png" alt="sym" />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="paper-info" id="nlmap">
+              <a href="https://nlmap-saycan.github.io/">
+                <heading
+                  >Open-vocabulary Queryable Scene Representations for Real
+                  World Planning
+                </heading>
+              </a>
+              <br />
+              Boyuan Chen, Fei Xia, Brian Ichter, Kanishka Rao, Keerthana
+              Gopalakrishnan, Michael S. Ryoo, Austin Stone, Daniel Kappler
+              <br />
+              Arxiv Pre-print 2022
+              <br />
+              <br />
+              <a href="https://nlmap-saycan.github.io/">webpage</a>
+              | <a href="https://arxiv.org/abs/2209.09874">paper</a> |
+              <a href="javascript:toggleblock('nlmap_abs')">abstract</a> |
+              <a
+                shape="rect"
+                href="javascript:togglebib('nlmap')"
+                class="togglebib"
+                >bibtex</a
+              >
+              |
+              <a href="https://youtu.be/Q9CvvArq4ZA">talk video</a>
+              <pre xml:space="preserve" style="display: none">
+@inproceedings{chen2022nlmapsaycan,
+    title={Open-vocabulary Queryable Scene Representations for Real World Planning},
+    author={Boyuan Chen and Fei Xia and Brian Ichter and Kanishka Rao and Keerthana Gopalakrishnan and Michael S. Ryoo and Austin Stone and Daniel Kappler
+    booktitle={arXiv preprint arXiv:2209.09874},
+    year={2022}
+}
+              </pre>
+            </div>
+            <p style="text-align: justify">
+              <i id="nlmap_abs"
+                >Large language models (LLMs) have unlocked new capabilities of
+                task planning from human instructions. However, prior attempts
+                to apply LLMs to real-world robotic tasks are limited by the
+                lack of grounding in the surrounding scene. In this paper, we
+                develop NLMap, an open-vocabulary and queryable scene
+                representation to address this problem. NLMap serves as a
+                framework to gather and integrate contextual information into
+                LLM planners, allowing them to see and query available objects
+                in the scene before generating a context-conditioned plan. NLMap
+                first establishes a natural language queryable scene
+                representation with Visual Language models (VLMs). An LLM based
+                object proposal module parses instructions and proposes involved
+                objects to query the scene representation for object
+                availability and location. An LLM planner then plans with such
+                information about the scene. NLMap allows robots to operate
+                without a fixed list of objects nor executable options, enabling
+                real robot operation unachievable by previous methods.</i
+              >
+            </p>
+          </div>
+        </div>
+
         <!--Paper 2 -->
         <div class="row">
           <div class="col-md-4">
@@ -242,8 +310,7 @@
     journal= {ICML},
     year   = {2021}
 }
-                            </pre
-              >
+              </pre>
             </div>
             <p style="text-align: justify">
               <i id="keypoint3D_abs"
@@ -841,6 +908,7 @@
 
     <!--Hide paper abstract by default-->
     <script xml:space="preserve">
+      hideblock("nlmap_abs");
       hideblock("keypoint3D_abs");
       hideblock("rpg_abs");
       hideblock("sap_abs");
