@@ -194,6 +194,84 @@
           </div>
         </div>
 
+        <!--Paper 4 -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="paper-thumbnail">
+              <a href="https://sites.google.com/view/eil-website">
+                <img src="images/research/eil.png" alt="sym" />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="paper-info" id="eil">
+              <a href="https://sites.google.com/view/eil-website">
+                <heading>Extraneousness-Aware Imitation Learning </heading>
+              </a>
+              <br />
+              Ray Chen Zheng, Kaizhe Hu, Zhecheng Yuan, Boyuan Chen, Huazhe Xu
+              <br />
+              Arxiv Pre-print 2022
+              <br />
+              <br />
+              <a href="https://sites.google.com/view/eil-website">webpage</a>
+              | <a href="https://arxiv.org/pdf/2210.01379v1.pdf">paper</a> |
+              <a href="javascript:toggleblock('eil_abs')">abstract</a> |
+              <a
+                shape="rect"
+                href="javascript:togglebib('eil')"
+                class="togglebib"
+                >bibtex</a
+              >
+              |
+              <a
+                href="https://drive.google.com/file/d/18JSM34ChoVIZtMsJStrc3Oal6fsS5muj/view"
+                >talk video</a
+              >
+              <pre xml:space="preserve" style="display: none">
+@misc{https://doi.org/10.48550/arxiv.2210.01379,
+  doi = {10.48550/ARXIV.2210.01379},
+  url = {https://arxiv.org/abs/2210.01379},
+  author = {Zheng, Ray Chen and Hu, Kaizhe and Yuan, Zhecheng and Chen, Boyuan and Xu, Huazhe},
+  keywords = {Robotics (cs.RO), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Extraneousness-Aware Imitation Learning},
+  publisher = {arXiv},
+  year = {2022},
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+              </pre>
+            </div>
+            <p style="text-align: justify">
+              <i id="eil_abs"
+                >Visual imitation learning provides an effective framework to
+                learn skills from demonstrations. However, the quality of the
+                provided demonstrations usually significantly affects the
+                ability of an agent to acquire desired skills. Therefore, the
+                standard visual imitation learning assumes near-optimal
+                demonstrations, which are expensive or sometimes prohibitive to
+                collect. Previous works propose to learn from noisy
+                demonstrations; however, the noise is usually assumed to follow
+                a context-independent distribution such as a uniform or gaussian
+                distribution. In this paper, we consider another crucial yet
+                underexplored setting — imitation learning with task-irrelevant
+                yet locally consistent segments in the demonstrations (e.g.,
+                wiping sweat while cutting potatoes in a cooking tutorial). We
+                argue that such noise is common in real world data and term them
+                as “extraneous” segments. To tackle this problem, we introduce
+                Extraneousness-Aware Imitation Learning (EIL), a self-supervised
+                approach that learns visuomotor policies from third-person
+                demonstrations with extraneous subsequences. EIL learns
+                action-conditioned observation embeddings in a self-supervised
+                manner and retrieves task-relevant observations across visual
+                demonstrations while excluding the extraneous ones. Experimental
+                results show that EIL outperforms strong baselines and achieves
+                comparable policies to those trained with perfect demonstration
+                on both simulated and real-world robot control tasks.</i
+              >
+            </p>
+          </div>
+        </div>
+
         <!--Paper 3 -->
         <div class="row">
           <div class="col-md-4">
@@ -908,6 +986,7 @@
 
     <!--Hide paper abstract by default-->
     <script xml:space="preserve">
+      hideblock("eil_abs");
       hideblock("nlmap_abs");
       hideblock("keypoint3D_abs");
       hideblock("rpg_abs");
