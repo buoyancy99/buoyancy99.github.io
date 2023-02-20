@@ -193,6 +193,47 @@
           </div>
         </div>
 
+        <!--Paper 5 -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="paper-thumbnail">
+              <a href="https://people.csail.mit.edu/boyuanc/">
+                <img src="images/research/ramp.png" alt="sym" />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="paper-info" id="ramp">
+              <a href="https://people.csail.mit.edu/boyuanc/">
+                <heading>Model-free Reinforcement Learning that Transfers using Random Features  </heading>
+              </a>
+              <br />
+              Boyuan Chen, Chuning Zhu, Pulkit Agrawal, Kaiqing Zhang, Abhishek Gupta 
+              <br />
+              in submission to International Conference of Machine Learning (ICML) 2023
+              <br />
+              <br />
+              <a href="https://people.csail.mit.edu/boyuanc/">webpage (coming soon)</a>
+              | <a href="https://people.csail.mit.edu/boyuanc/">paper (coming soon)</a> |
+              <a href="javascript:toggleblock('ramp_abs')">abstract</a> |
+              <a
+                shape="rect"
+                href="javascript:togglebib('ramp')"
+                class="togglebib"
+                >bibtex</a
+              >
+              <pre xml:space="preserve" style="display: none">
+Arxiv coming soon!
+              </pre>
+            </div>
+            <p style="text-align: justify">
+              <i id="ramp_abs"
+                >Reinforcement learning (RL) algorithms have the potential not only for synthesizing complex control behaviors, but also for transfer across tasks. Model-free RL excels in solving problems with high-dimensional observations or long horizons, but the learned policies do not transfer across different reward functions. Model-based RL, on the other hand, naturally enables transfer across different reward functions, but struggles in complex environments due to compounding error. In this work, we propose a new method for transferring behaviors across tasks with different rewards, combining the performance of model-free RL with the transferability of model-based RL. In particular, we show how model-free RL using a number of random features as the reward allows for implicit modeling of long-horizon environment dynamics. Model-predictive control using these implicit models enables fast adaptation to problems with new reward functions while avoiding the compounding error from model rollouts. Our method can be trained on offline datasets without reward labels, and quickly deployed on new tasks, making it more widely applicable than typical RL methods. We validate that our proposed method enables transfer across tasks on a variety of manipulation and locomotion domains. </i
+              >
+            </p>
+          </div>
+        </div>
+
         <!--Paper 4 -->
         <div class="row">
           <div class="col-md-4">
@@ -985,6 +1026,7 @@
 
     <!--Hide paper abstract by default-->
     <script xml:space="preserve">
+      hideblock("ramp_abs");
       hideblock("eil_abs");
       hideblock("nlmap_abs");
       hideblock("keypoint3D_abs");
