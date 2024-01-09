@@ -943,6 +943,7 @@ section.about .about-content p {
 
 section.about .about-content .social-icons {
     margin-top: 30px;
+    width: 50%
 }
 
 section.about .about-content .social-icons a {
@@ -980,7 +981,8 @@ section.about .about-content .social-icons a:hover .fa {
 }
 
 section.about .about-content .about-button {
-    margin-top: 40px;
+    margin-top: 23px;
+    width: 30%
 }
 
 
