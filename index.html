@@ -216,6 +216,86 @@
           </div>
         </div>
 
+        <!--Paper 6 -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="paper-thumbnail">
+              <a href="https://spatial-vlm.github.io/">
+                <img
+                  src="images/research/spatial_vlm.jpg"
+                  alt="paper thumbnail"
+                  width="504"
+                  height="300"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="paper-info" id="spatialvlm">
+              <a href="https://spatial-vlm.github.io/">
+                <heading
+                  >Spatial VLM: Endowing Vision-Language Models with Spatial
+                  Reasoning Capabilities
+                </heading>
+              </a>
+              <br />
+              Boyuan Chen, Zhuo Xu, Sean Kirmani, Brian Ichter, Danny Driess,
+              Pete Florence, Dorsa Sadigh, Leonidas Guibas, Fei Xia
+              <br />
+              <strong>Arxiv 2024</strong>
+              <br />
+              <br />
+              <a href="https://spatial-vlm.github.io/">website</a>
+              |
+              <a href="https://arxiv.org/abs/2401.12168">paper</a>
+              |
+              <a href="javascript:toggleblock('spatialvlm_abs')">abstract</a> |
+              <a
+                shape="rect"
+                href="javascript:togglebib('spatialvlm')"
+                class="togglebib"
+                >bibtex</a
+              >
+              <pre xml:space="preserve" style="display: none">
+@misc{chen2024spatialvlm,
+  title={SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities}, 
+  author={Boyuan Chen and Zhuo Xu and Sean Kirmani and Brian Ichter and Danny Driess and Pete Florence and Dorsa Sadigh and Leonidas Guibas and Fei Xia},
+  year={2024},
+  eprint={2401.12168},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}
+              </pre>
+            </div>
+            <p style="text-align: justify">
+              <i id="spatialvlm_abs"
+                >Understanding and reasoning about spatial relationships is a
+                fundamental capability for Visual Question Answering (VQA) and
+                robotics. While Vision Language Models (VLM) have demonstrated
+                remarkable performance in certain VQA benchmarks, they still
+                lack capabilities in 3D spatial reasoning, such as recognizing
+                quantitative relationships of physical objects like distances or
+                size differences. We hypothesize that VLMs' limited spatial
+                reasoning capability is due to the lack of 3D spatial knowledge
+                in training data and aim to solve this problem by training VLMs
+                with Internet-scale spatial reasoning data. To this end, we
+                present a system to facilitate this approach. We first develop
+                an automatic 3D spatial VQA data generation framework that
+                scales up to 2 billion VQA examples on 10 million real-world
+                images. We then investigate various factors in the training
+                recipe, including data quality, training pipeline, and VLM
+                architecture. Our work features the first internet-scale 3D
+                spatial reasoning dataset in metric space. By training a VLM on
+                such data, we significantly enhance its ability on both
+                qualitative and quantitative spatial VQA. Finally, we
+                demonstrate that this VLM unlocks novel downstream applications
+                in chain-of-thought spatial reasoning and robotics due to its
+                quantitative estimation capability.
+              </i>
+            </p>
+          </div>
+        </div>
+
         <!--Paper 5 -->
         <div class="row">
           <div class="col-md-4">
@@ -246,7 +326,7 @@
               Processing Systems)
               <br />
               <br />
-              <a href="https://buoyancy99.github.io/ramp-rl/">webpage</a>
+              <a href="https://buoyancy99.github.io/ramp-rl/">website</a>
               |
               <a href="https://arxiv.org/abs/2305.17250">paper</a>
               | <a href="javascript:toggleblock('ramp_abs')">abstract</a> |
@@ -257,7 +337,14 @@
                 >bibtex</a
               >
               <pre xml:space="preserve" style="display: none">
-Arxiv coming soon!
+@misc{chen2023selfsupervised,
+  title={Self-Supervised Reinforcement Learning that Transfers using Random Features}, 
+  author={Boyuan Chen and Chuning Zhu and Pulkit Agrawal and Kaiqing Zhang and Abhishek Gupta},
+  year={2023},
+  eprint={2305.17250},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG}
+}
               </pre>
             </div>
             <p style="text-align: justify">
@@ -314,7 +401,7 @@ Arxiv coming soon!
               and Automation)
               <br />
               <br />
-              <a href="https://sites.google.com/view/eil-website">webpage</a>
+              <a href="https://sites.google.com/view/eil-website">website</a>
               | <a href="https://arxiv.org/pdf/2210.01379v1.pdf">paper</a> |
               <a href="javascript:toggleblock('eil_abs')">abstract</a> |
               <a
@@ -402,7 +489,7 @@ Arxiv coming soon!
               and Automation)
               <br />
               <br />
-              <a href="https://nlmap-saycan.github.io/">webpage</a>
+              <a href="https://nlmap-saycan.github.io/">website</a>
               | <a href="https://arxiv.org/abs/2209.09874">paper</a> |
               <a href="javascript:toggleblock('nlmap_abs')">abstract</a> |
               <a
@@ -476,7 +563,7 @@ Arxiv coming soon!
               <br />
               <br />
               <a href="https://buoyancy99.github.io/unsup-3d-keypoints/"
-                >webpage</a
+                >website</a
               >
               | <a href="https://arxiv.org/abs/2106.07643">paper</a> |
               <a href="javascript:toggleblock('keypoint3D_abs')">abstract</a> |
@@ -556,7 +643,7 @@ Arxiv coming soon!
               and Automation)
               <br />
               <br />
-              <a href="https://sites.google.com/view/sapnew/home">webpage</a> |
+              <a href="https://sites.google.com/view/sapnew/home">website</a> |
               <a href="https://arxiv.org/abs/1910.08143">paper</a> |
               <a href="javascript:toggleblock('sap_abs')">abstract</a> |
               <a
@@ -651,7 +738,7 @@ Arxiv coming soon!
               Representations)
               <br />
               <br />
-              <a href="https://sites.google.com/view/staghuntrpg">webpage</a> |
+              <a href="https://sites.google.com/view/staghuntrpg">website</a> |
               <a href="https://arxiv.org/abs/2103.04564">paper</a> |
               <a href="javascript:toggleblock('rpg_abs')">abstract</a> |
               <a
@@ -1229,6 +1316,7 @@ Arxiv coming soon!
 
     <!--Hide paper abstract by default-->
     <script xml:space="preserve">
+      hideblock("spatialvlm_abs");
       hideblock("ramp_abs");
       hideblock("eil_abs");
       hideblock("nlmap_abs");
