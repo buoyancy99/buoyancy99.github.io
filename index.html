@@ -216,6 +216,83 @@
           </div>
         </div>
 
+        <!--Paper 7 -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="paper-thumbnail">
+              <a href="https://dittogym.github.io/">
+                <img
+                  src="images/research/ditto.jpg"
+                  alt="paper thumbnail"
+                  width="504"
+                  height="300"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="paper-info" id="dittogym">
+              <a href="https://dittogym.github.io/">
+                <heading
+                  >DittoGym: Learning to Control Soft Shape-Shifting Robots
+                </heading>
+              </a>
+              <br />
+              Suning Huang, Boyuan Chen, Huazhe Xu, Vincent Sitzmann
+              <br />
+              <strong>ICLR 2024</strong> (International Conference on Learning
+              Representations)
+              <br />
+              <br />
+              <a href="https://dittogym.github.io/">website</a>
+              |
+              <a href="https://arxiv.org/abs/2401.13231">paper</a>
+              |
+              <a href="javascript:toggleblock('dittogym_abs')">abstract</a> |
+              <a
+                shape="rect"
+                href="javascript:togglebib('dittogym')"
+                class="togglebib"
+                >bibtex</a
+              >
+              <pre xml:space="preserve" style="display: none">
+@misc{huang2024dittogym,
+  title={DittoGym: Learning to Control Soft Shape-Shifting Robots}, 
+  author={Suning Huang and Boyuan Chen and Huazhe Xu and Vincent Sitzmann},
+  year={2024},
+  eprint={2401.13231},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO}
+}
+              </pre>
+            </div>
+            <p style="text-align: justify">
+              <i id="dittogym_abs"
+                >Robot co-design, where the morphology of a robot is optimized
+                jointly with a learned policy to solve a specific task, is an
+                emerging area of research. It holds particular promise for soft
+                robots, which are amenable to novel manufacturing techniques
+                that can realize learned morphologies and actuators. Inspired by
+                nature and recent novel robot designs, we propose to go a step
+                further and explore the novel reconfigurable robots, defined as
+                robots that can change their morphology within their lifetime.
+                We formalize control of reconfigurable soft robots as a
+                highdimensional reinforcement learning (RL) problem. We unify
+                morphology change, locomotion, and environment interaction in
+                the same action space, and introduce an appropriate,
+                coarse-to-fine curriculum that enables us to discover policies
+                that accomplish fine-grained control of the resulting robots. We
+                also introduce DittoGym, a comprehensive RL benchmark for
+                reconfigurable soft robots that require fine-grained morphology
+                changes to accomplish the tasks. Finally, we evaluate our
+                proposed coarse-to-fine algorithm on DittoGym and demonstrate
+                robots that learn to change their morphology several times
+                within a sequence, uniquely enabled by our RL algorithm.
+              </i>
+            </p>
+          </div>
+        </div>
+
         <!--Paper 6 -->
         <div class="row">
           <div class="col-md-4">
@@ -1316,6 +1393,7 @@
 
     <!--Hide paper abstract by default-->
     <script xml:space="preserve">
+      hideblock("dittogym_abs");
       hideblock("spatialvlm_abs");
       hideblock("ramp_abs");
       hideblock("eil_abs");
