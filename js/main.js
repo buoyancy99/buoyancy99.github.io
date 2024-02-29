@@ -1,5 +1,5 @@
 /************* Main Js File ************************
-    Template Name: Boyuan - Homepage
+    Template Name: Boyuan - Website
     Author: cosmos-themes
     Version: 2.0
     Copyright 2021
