@@ -12,6 +12,7 @@
         1. Window Load Function
             a. Preloader Setup
             b. Portfolio Isotope Setup
+            c. Load order
         2. Document Ready Function
             a. ScrollIt Setup
             b. Navbar Scrolling Background
@@ -30,7 +31,23 @@ $(window).on("load", function () {
   /*========Preloader Setup========*/
   setTimeout(function () {
     $(".preloader").addClass("loaded");
-  }, 200);
+  }, 0); // since we disabled preloader for now, we can set this to 0
+
+  /*======== Load order ========*/
+  var bannerSection = document.getElementById('home');
+  bannerSection.style.display = 'block';
+  var navBar = document.getElementById('navbar');
+  navBar.style.display = '';
+  var aboutSection = document.getElementById('about');
+  aboutSection.style.display = '';
+  var researchSection = document.getElementById('research');
+  researchSection.style.display = '';
+  var portfolioSection = document.getElementById('portfolio');
+  portfolioSection.style.display = '';
+  var blogSection = document.getElementById('blogs');
+  blogSection.style.display = '';
+  var footer = document.getElementById('footer')
+  footer.style.display = '';
 
   /*========Portfolio Isotope Setup========*/
   if ($(".portfolio-items").length) {
