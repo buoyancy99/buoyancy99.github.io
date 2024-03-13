@@ -23,6 +23,7 @@
         13. Blogs Page
         14. Single Blog Page
         15. Mobile Responsive
+        16. Fallback font
 ==================================*/
 
 
@@ -59,7 +60,7 @@ a:focus {
 }
 
 body {
-    font-family: "Raleway", san-serif;
+    font-family: "Raleway", "arial-adjusted", "roboto-adjusted";
     position: relative;
     font-size: 16px;
     line-height: 1.65;
@@ -692,7 +693,6 @@ nav.fixed-top .nav-item .nav-link:before {
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
-    display:block !important;
 }
 
 .banner:after {
@@ -722,12 +722,15 @@ nav.fixed-top .nav-item .nav-link:before {
     font-size: 88px;
     font-weight: 900;
     color: #fff;
+    font-display: optional;
+    font-family: "arial-h1-adjusted", "roboto-h1-adjusted";
 }
 
 .banner .banner-caption p {
     font-size: 24px;
-    font-family: "Raleway", san-serif;
+    font-family: "arial-adjusted", "roboto-adjusted";
     color: #eee;
+    font-display: optional;
 }
 
 .cd-headline {
@@ -933,7 +936,7 @@ section.about .about-content .about-heading h2 {
 }
 
 section.about .about-content .about-heading span {
-    font-family: "Raleway", san-serif;
+    font-family: "Raleway", "arial-adjusted", "roboto-adjusted";
     color: #222;
     font-size: 19px;
 }
@@ -1070,7 +1073,7 @@ section.portfolio .portfolio-filter ul li {
     margin-right: 20px;
     color: #222;
     position: relative;
-    font-family: "Raleway", san-serif;
+    font-family: "Raleway", "arial-adjusted", "roboto-adjusted";
     cursor: pointer;
     text-transform: uppercase;
 }
@@ -1633,4 +1636,42 @@ section.banner-blog .banner-caption h1 {
     section.banner-blog .banner-caption h1 {
         font-size: 32px;
     }
+}
+
+/*============ 16. Fallback Font ============*/
+
+@font-face {
+    font-family: arial-adjusted;
+    src: local("Arial");
+    size-adjust: 103%;
+    ascent-override: 90%;
+    descent-override: 25%;
+    line-gap-override: 0%;
+}
+
+@font-face {
+    font-family: arial-h1-adjusted;
+    src: local("Arial");
+    size-adjust: 104.8%;
+    ascent-override: 89%;
+    descent-override: 23%;
+    line-gap-override: 0%;
+}
+
+@font-face {
+    font-family: roboto-adjusted;
+    src: local("Roboto");
+    size-adjust: 103%;
+    ascent-override: 90%;
+    descent-override: 25%;
+    line-gap-override: 0%;
+}
+
+@font-face {
+    font-family: roboto-h1-adjusted;
+    src: local("Roboto");
+    size-adjust: 103%;
+    ascent-override: 90%;
+    descent-override: 25%;
+    line-gap-override: 0%;
 }
