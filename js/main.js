@@ -34,10 +34,10 @@ $(window).on("load", function () {
   }, 0); // since we disabled preloader for now, we can set this to 0
 
   /*======== Load order ========*/
-  var bannerSection = document.getElementById('home');
-  bannerSection.style.display = 'block';
   var navBar = document.getElementById('navbar');
   navBar.style.display = '';
+  var bannerSection = document.getElementById('home');
+  bannerSection.style.display = 'block';
   var aboutSection = document.getElementById('about');
   aboutSection.style.display = '';
   var researchSection = document.getElementById('research');
