@@ -1636,6 +1636,9 @@ section.banner-blog .banner-caption h1 {
     section.banner-blog .banner-caption h1 {
         font-size: 32px;
     }
+    .cd-headline{
+        display: none;
+    }
 }
 
 /*============ 16. Fallback Font ============*/
