@@ -8,10 +8,9 @@ shareBtns.forEach((btn) => {
     let title = document.title; // Get current page title
     let img_url = document.querySelectorAll('meta[property="og:image"]')[0]
       .content;
-    let desc = document.querySelectorAll('meta[property="description"]')[0]
-      .content;
+    let desc = document.querySelectorAll('meta[name="description"]')[0].content;
 
-    console.log(img_url); // Added line to print shareBtns
+    console.log("陈博远的主页: " + desc); // Added line to print shareBtns
 
     switch (socialMedia) {
       case "twitter":
