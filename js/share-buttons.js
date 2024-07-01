@@ -19,12 +19,14 @@ shareBtns.forEach((btn) => {
         );
         break;
       case "wechat":
-        WeixinJSBridge.invoke("shareTimeline", {
-          img_url: img_url,
-          link: url,
-          desc: "陈博远的主页: " + desc,
-          title: "陈博远的主页: " + title,
-        });
+        if (typeof WeixinJSBridge !== "undefined") {
+          WeixinJSBridge.invoke("shareTimeline", {
+            img_url: img_url,
+            link: url,
+            desc: "陈博远的主页: " + desc,
+            title: "陈博远的主页: " + title,
+          });
+        }
         break;
       // case "linkedin":
       //   window.open(
