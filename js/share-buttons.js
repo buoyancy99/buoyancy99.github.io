@@ -1,5 +1,20 @@
 const shareBtns = document.querySelectorAll(".share-btn");
 
+function onWechatBridgeReady() {
+  // wechat specific callback
+  let url = window.location.href; // Get current page URL
+  let title = document.title; // Get current page title
+  let img_url = document.querySelectorAll('meta[property="og:image"]')[0]
+    .content;
+  let desc = document.querySelectorAll('meta[name="description"]')[0].content;
+  window.WeixinJSBridge.invoke("shareTimeline", {
+    img_url: img_url,
+    link: url,
+    desc: "陈博远的主页: " + desc,
+    title: "陈博远的主页: " + title,
+  });
+}
+
 shareBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -17,13 +32,19 @@ shareBtns.forEach((btn) => {
         );
         break;
       case "wechat":
-        if (typeof window.WeixinJSBridge !== "undefined") {
-          window.WeixinJSBridge.invoke("shareTimeline", {
-            img_url: img_url,
-            link: url,
-            desc: "陈博远的主页: " + desc,
-            title: "陈博远的主页: " + title,
-          });
+        if (typeof WeixinJSBridge == "undefined") {
+          if (document.addEventListener) {
+            document.addEventListener(
+              "WeixinJSBridgeReady",
+              onWechatBridgeReady,
+              false
+            );
+          } else if (document.attachEvent) {
+            document.attachEvent("WeixinJSBridgeReady", onWechatBridgeReady);
+            document.attachEvent("onWeixinJSBridgeReady", onWechatBridgeReady);
+          }
+        } else {
+          onWechatBridgeReady();
         }
         break;
       // case "linkedin":
