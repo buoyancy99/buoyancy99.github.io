@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="embodied intelligence,robotics,general purpose robot,foundation model,MIT,Boyuan Chen" />
+    <meta
+      name="description"
+      content="Boyuan Chen's blog on building general purpose robots and achieving embodied intelligence" />
+    <meta name="author" content="cosmos-themes" />
+
+    <!--TWITTER TODO-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="The epic quest to Embodied AI and general-purpose robots" />
+    <meta
+      name="twitter:description"
+      content="Boyuan Chen's blog on building general purpose robots and achieving embodied intelligence" />
+    <meta
+      name="twitter:image"
+      content="https://boyuan.space/images/blog/jushenzhineng/cover.jpg" />
+
+    <title>The epic quest to Embodied AI and general-purpose robots</title>
+    <base href="../" />
+    <!-- favicon -->
+    <link href="images/favicon.ico" rel="icon" type="image/png" />
+
+    <!--Font Awesome css-->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+
+    <!--Owl Carousel css-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+    <!--Magnific Popup css-->
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800,900%7cOpen+Sans:400,600,700,800"
+      rel="stylesheet" />
+
+    <!--Site Main Style css-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!--Preloader Start-->
+    <div class="preloader">
+      <div class="loader"></div>
+    </div>
+    <!--Preloader End-->
+
+    <!--Navbar Start-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <!-- LOGO -->
+        <a class="navbar-brand logo" href="index.html"> Home </a>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="blogs-page.html" class="nav-link active">Back</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Navbar End-->
+
+    <section class="banner-blog">
+      <div id="particles-js"></div>
+      <!--Banner Caption-->
+      <div class="banner-caption text-center">
+        <h1>The epic quest to Embodied AI and general-purpose robots</h1>
+        <div class="bread-crumb mt-10">
+          <a href="index.html">Home</a>
+          <a href="blogs-page.html">Blogs</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-detail pt-100 pb-100">
+      <div class="container">
+        <div class="row">
+          <!--Blog Content-->
+          <div class="col-lg-8 offset-lg-2">
+            <!--Blog Image-->
+            <div class="blog-image">
+              <img src="images/blog/003_embodied_ai/cover.jpg" alt="" />
+            </div>
+            <!--Blog Heading-->
+            <div class="blog-heading">
+              <h2>The epic quest to Embodied AI and general-purpose robots</h2>
+              <div class="blog-meta">
+                <span class="date">16 Jun 2024</span>
+                <span class="by">Boyuan Chen</span>
+              </div>
+            </div>
+            <!--Blog Content-->
+            <div class="blog-content">
+              <p>
+                Recently, I watched the documentary "Sixty Years of Artificial
+                Intelligence at Stanford." From 1962 to 2022, robotics or
+                embodied intelligence research has been integral to the
+                development of artificial intelligence from day one. By 2023,
+                most of the problems proposed during these sixty years, from
+                chess to vision and speech recognition, have been solved—except
+                for robotics. The question of how to create a general-purpose
+                robot is one that I ponder day and night. While conducting
+                research can be exhausting, contemplating this question is
+                exhilarating.
+              </p>
+
+              <p>
+                2023 can be considered the inaugural year for embodied
+                intelligence gaining recognition in the capital market. This
+                surge in popularity means I no longer need to explain to every
+                VC that our ultimate ideal is not to create a mechanical shell,
+                but rather an intelligence yet physical "person" that can
+                completely liberate human labor in the future. Historically, the
+                popularity of every emerging technology has been accompanied by
+                both opportunities and bubbles. As a doctoral student at the
+                <a href="https://ei.csail.mit.edu/index.html"
+                  >MIT Embodied Intelligence Laboratory</a
+                >,I hope this essay will help practitioners worldwide better and
+                more rationally understand the opportunities and challenges of
+                embodied intelligence, fostering sustainable development in the
+                field.
+              </p>
+              <p>
+                Large models represented by ChatGPT have given us a glimpse of
+                the future. Robot large models have appeared in almost every
+                robotics company's presentation slides over the past year.
+                Papers like
+                <a href="https://palm-e.github.io/">PaLM-E</a>,<a
+                  href="https://research.google/blog/rt-1-robotics-transformer-for-real-world-control-at-scale/"
+                  >RT1</a
+                >,<a
+                  href="https://deepmind.google/discover/blog/rt-2-new-model-translates-vision-and-language-into-action/"
+                  >RT2</a
+                >have also demonstrated the vision of large models directly
+                outputting control signals. So, will the approach of large
+                language models bring us general-purpose robots? To answer this
+                question, I'd like to expand the term "large model" into "large
+                models and big data." Large language models not only require
+                billions of neural network parameters but also need to be
+                pre-trained on vast amounts of internet data. For example,
+                open-source large language models like Llama3 used 15 trillion
+                tokens for pre-training alone. In comparison, data collection
+                for robots is much more challenging. People naturally generate
+                data in these two modalities by taking photos and writing text
+                on the internet every day. You might take a photo of a fancy
+                meal and post it on social media, but you would never write in
+                the caption, "My thumb joints rotated 30 degrees, 20 degrees,
+                and 45 degrees respectively to pick up the fork." I believe that
+                with enough high-quality robotic data, robot large models could
+                absolutely bring near-general generalization, but where to
+                obtain robotic action data is a less than optimistic issue—the
+                generalization of these large models that directly output action
+                modalities is thus very limited. This problem still exists even
+                in relatively mature multimodal models like VLMs - The paper
+                <a href="https://spatial-vlm.github.io/">SpatialVLM</a>,
+                developed during my internship at Google DeepMind, found that
+                the best multimodal large models often confuse left and right.
+                Therefore, it can be inferred that many current "robot large
+                models" with action modality output can manipulate mechanical
+                hands correctly to move left or right, likely only because they
+                have overfitted on limited action data, rather than magically
+                generalizing due to the integration with text-image foundation
+                models.
+              </p>
+
+              <p>
+                The good news is that both industry and academia are working to
+                address the lack of action data. Many scholars, including
+                myself, are willing to summarize these efforts in two
+                dimensions: dexterity and generalization. Dexterity mainly
+                reflects how difficult tasks a robot can accomplish in a single
+                scenario with relatively fixed tasks, such as using the same
+                pencil sharpener to sharpen the same pencil placed in roughly
+                the same position on the same table. Generalization, on the
+                other hand, studies how to enable robots to perform new tasks in
+                new scenarios, even if these tasks seem very simple or stupid,
+                such as being able to use hands to push any specified pencil to
+                a designated place on any table in any room. Enabling robots to
+                possess both dexterity and generalization is the ultimate goal
+                of embodied intelligence.
+              </p>
+
+              <p>
+                Currently, the hottest direction in the dexterity dimension is
+                behavior cloning in imitation learning—relying on manually
+                collected joint action data and then training robots using
+                supervised learning methods. At the hardware level,
+                <a href="https://mobile-aloha.github.io/">ALOHA</a>-style
+                joint-to-joint mapping, hand motion capture with VR goggles,
+                Tesla's motion capture gloves, and the RT-X dataset are all
+                attempts by academia and industry to collect data more
+                efficiently. Most of these methods require equipping each data
+                collector with an expensive robot, but projects ranging from
+                Tesla's Optimus to Stanford's shrimp-cooking robot have shown us
+                the value of behavior cloning. Behavior cloning allows some
+                particularly impressive tasks with limited generalization needs
+                to be completed using simple algorithms. However, due to the low
+                efficiency of manual action data collection, the generalization
+                demonstrated in all demos is extremely limited—if you replace a
+                banana with an orange and move it half a meter, or change to a
+                table with a different pattern, these robots in the videos would
+                be powerless using the models trained on limited data at the
+                time of release, let alone cross-task generalization. Of course,
+                you can collect multi-task data, such as mixing data for bananas
+                and oranges, and collect demos with many different initial
+                positions, but unless your number of tasks reaches the level of
+                large language models, action models trained on peeling bananas
+                and oranges still cannot solve the problem of peeling mangoes.
+                Many general-purpose humanoid robot companies have also adopted
+                behavior cloning as an entry point because it's easiest to
+                produce good-looking videos—no one can test your model's
+                generalization by changing the scenario in your video to a
+                never-before-seen task. The public also prefers to watch videos
+                of robots doing daily household chores rather than pushing
+                blocks on a laboratory table—even if the video of doing chores
+                requires employing someone to manually operate behind the
+                scenes. My view on this is that the current behavior cloning
+                approach mainly solves the problem of dexterity rather than
+                generalization, but the former is also very important. Many
+                tasks on current production lines meet the applicable conditions
+                of imitation learning and have extremely high commercial value,
+                so practitioners do not necessarily have to deliberately pursue
+                general-purpose robots.
+              </p>
+
+              <p>
+                If we do the math, general-purpose robot companies investing
+                large amounts of money to collect data for robot large models
+                using the imitation learning approach could indeed collect part
+                of the data scale needed for instruction fine-tuning using the
+                methods mentioned in the previous paragraph (Llama3's
+                instruction fine-tuning used 10 million manually annotated data,
+                which can be analogized to 10 million different task robot data
+                here), but we shouldn't ignore that the data used for
+                pre-training could be millions of times more than that for
+                instruction fine-tuning.
+              </p>
+
+              <p>
+                Therefore, many scholars believe that behavior cloning alone
+                cannot bring about general-purpose robots and focus their
+                research on generalization. When I talk about the lack of data
+                for robots, I'm referring to our lack of data that includes
+                action modalities. However, we can take a step back and obtain
+                actions through large amounts of data from other modalities. For
+                example, although video models like SORA do not directly output
+                information like how many degrees each finger joint rotated, the
+                videos they generate still contain a large amount of information
+                about human actions that can be extracted through human pose
+                estimation. If you enter a new scenario, assuming the video
+                prediction model is good enough, it can generate videos with
+                skills based on images of the new scenario and text descriptions
+                of the task, such as MIT and Google's
+                <a href="https://universal-policy.github.io/unipi/">UniPi</a>.
+                Moreover, when video models are combined with text models, we
+                have a (loosely defined) world model that can, like large
+                language models, use search to generate data for
+                self-improvement and self-learning, rather than just single-step
+                policies. World models can even be combined with model-based
+                reinforcement learning. It is precisely because video data is
+                inexhaustible that even I, as an embodied intelligence scholar,
+                have temporarily set aside hardware and shifted my research
+                direction to exploring videos over the past year, aiming to make
+                video models not only generate visually appealing artistic
+                videos but also perform well in the physical laws and tasks
+                needed for robots.
+              </p>
+              <p>
+                In addition to video world models, large-scale reinforcement
+                learning is also a possible route to generalization. As a former
+                reinforcement learning researcher, I once despaired for a long
+                time over the two major problems of reinforcement
+                learning—manually designed scenario simulations and manually
+                designed reward functions. If I wanted a robot to learn a task
+                in a room, I would need to manually model the room and input it
+                into the simulator, and design a good reward function to tell
+                the robot how well it did in a particular attempt. Both of these
+                used to require an extremely large amount of manual
+                intervention, making it impossible to scale up to the number of
+                scenarios and tasks needed for generalization. But generative AI
+                has changed all that—we can now easily generate large numbers of
+                3D objects and are gradually able to generate large numbers of
+                scenes. Although multimodal models are still weak, they can
+                already mark the success or failure of tasks in some cases, or
+                break down large tasks into smaller ones for agents to learn
+                actions, or even annotate more detailed non-sparse reward
+                functions designed down to distances, as in my previous paper.
+                GenSim has already demonstrated the generation of simple robotic
+                tasks, and when 3D scene generation matures and VLMs become
+                cheap enough, we will see truly impressive large-scale
+                reinforcement learning. Imitation learning can also easily be
+                combined with reinforcement learning to enhance its
+                effectiveness.
+              </p>
+              <p>
+                Beyond this, traditional robotic motion planning is also crucial
+                for solving the data problem for general-purpose robots.
+                Although many dexterous tasks must be learned through
+                human-generated data (joint-to-joint demonstrations or videos),
+                a large portion of the subtasks in these dexterous tasks are
+                indeed spent on very basic reaching, contacting objects, moving
+                objects, and avoiding obstacles. The data for these subtasks can
+                be completely generated through motion planning for
+                pre-training, saving human time. For example, Boston Dynamics'
+                Spot robot dog can very reliably automatically pick up oddly
+                shaped objects placed in different environments without hitting
+                obstacles. Achieving this level of generalization through
+                behavior cloning would require an extremely exaggerated amount
+                of manual data collection. The previous paragraph on large-scale
+                reinforcement learning mentioned the potential of generative AI
+                to generate scenes in the future, and with these scenes,
+                replacing reinforcement learning with motion planning might
+                achieve higher efficiency. I remember when I was applying for my
+                PhD, a professor asked me during an interview how I viewed the
+                application of end-to-end methods in robotics. My answer was
+                that end-to-end would perform well given sufficient data, but we
+                need to spend decades using modular methods to analyze and
+                practice to form a good enough data closed loop first. This
+                approach has been well validated in Tesla's autonomous
+                driving—when data is insufficient, combining planning algorithms
+                and vision networks in a modular way can get the car running
+                first, and after a certain period of time, using the generated
+                data mixed with user data to train end-to-end autonomous driving
+                gave birth to FSD12. I believe motion planning will play an
+                equally important role in the early stages of general-purpose
+                robots.
+              </p>
+              <p>
+                I can seriously promise everyone that embodied intelligence will
+                definitely be the most exciting technology in the next hundred
+                years, and we have a very good chance of witnessing the birth of
+                general-purpose robots in our lifetime. But it is precisely
+                because I love this field so deeply that I would rather see
+                society invest in the development of general-purpose robots in a
+                steady stream. I'd love to see researchers be result-driven yet
+                not demo-driven; I'd love to see investors maintain long-term
+                confidence in embodied intelligence while not blindly hyping up
+                robot GPT due to hardware companies' financing needs; I'd love
+                to see entrepreneurs tenaciously chase their dream, paving the
+                way for truly general-purpose robots through business successes
+                in specialized areas. And I myself am prepared to dedicate my
+                life, pouring every ounce of effort and passion into the
+                monumental task of bringing truly general-purpose robots into
+                reality for humanity.
+              </p>
+              <p>2024/06/16</p>
+              <p>Boyuan Chen</p>
+              <p>Written on my flight to Seattle</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Footer Start-->
+    <footer class="pt-50 pb-50">
+      <div class="container">
+        <!-- <div class="row text-center">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="contact-info">
+                            <h5>Boyuan</h5>
+                            <p>lorem Ipsum donor sit.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="contact-info">
+                            <h5>Phone No.</h5>
+                            <p>(+1) 123 456 7890</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="contact-info">
+                            <h5>Email</h5>
+                            <p>info@example.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="contact-info">
+                            <h5>Address</h5>
+                            <p>123 lorem ipsum New York, USA.</p>
+                        </div>
+                    </div>
+                </div> -->
+        <div class="row text-center">
+          <div class="col-md-12">
+            <p class="copy pt-30">
+              Boyuan Chen &copy; 2022. All Right Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Footer End-->
+
+    <!--Jquery js-->
+    <script src="js/jquery.min.js"></script>
+    <!--Bootstrap js-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Stellar js-->
+    <script src="js/jquery.stellar.js"></script>
+    <!--Animated Headline js-->
+    <script src="js/animated.headline.js"></script>
+    <!--Owl Carousel js-->
+    <script src="js/owl.carousel.min.js"></script>
+    <!--ScrollIt js-->
+    <script src="js/scrollIt.min.js"></script>
+    <!--Isotope js-->
+    <script src="js/isotope.pkgd.min.js"></script>
+    <!--Magnific Popup js-->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!--Particles js-->
+    <script src="js/particles.min.js"></script>
+    <!--Site Main js-->
+    <script src="js/main.js"></script>
+    <script>
+      //Particles
+      particlesJS.load("particles-js", "js/particles.json", function () {
+        console.log("particles loaded");
+      });
+    </script>
+  </body>
+</html>
