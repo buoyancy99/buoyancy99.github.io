@@ -10,8 +10,6 @@ shareBtns.forEach((btn) => {
       .content;
     let desc = document.querySelectorAll('meta[name="description"]')[0].content;
 
-    console.log("陈博远的主页: " + desc); // Added line to print shareBtns
-
     switch (socialMedia) {
       case "twitter":
         window.open(
@@ -19,8 +17,8 @@ shareBtns.forEach((btn) => {
         );
         break;
       case "wechat":
-        if (typeof WeixinJSBridge !== "undefined") {
-          WeixinJSBridge.invoke("shareTimeline", {
+        if (typeof window.WeixinJSBridge !== "undefined") {
+          window.WeixinJSBridge.invoke("shareTimeline", {
             img_url: img_url,
             link: url,
             desc: "陈博远的主页: " + desc,
