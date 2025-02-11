@@ -333,6 +333,86 @@
           </div>
         </div>
 
+        <!--Paper 9 -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="paper-thumbnail">
+              <a href="https://boyuan.space/history-guidance/">
+                <img
+                  loading="lazy"
+                  src="images/research/hg.webp"
+                  alt="paper thumbnail"
+                  width="504"
+                  height="300" />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="paper-info" id="history_guidance">
+              <a href="https://boyuan.space/history-guidance/">
+                <heading>History-Guided Video Diffusion</heading>
+              </a>
+              <br />
+              Kiwhan Song<strong>*</strong>, Boyuan Chen<strong>*</strong>, Max
+              Simchowitz, Yilun Du, Russ Tedrake, Vincent Sitzmann
+              <br />
+              <strong>*</strong> Equal contribution
+              <br />
+              <strong>arXiv 2024</strong>
+              <br />
+              <br />
+              <a href="https://boyuan.space/history-guidance/">website</a> |
+              <a href="https://arxiv.org/abs/2502.06764">paper</a> |
+              <a href="javascript:toggleblock('history_guidance_abs')"
+                >abstract</a
+              >
+              |
+              <a
+                shape="rect"
+                href="javascript:togglebib('history_guidance')"
+                class="togglebib"
+                >bibtex</a
+              >
+              <pre xml:space="preserve" style="display: none">
+@misc{song2025historyguidedvideodiffusion,
+  title={History-Guided Video Diffusion}, 
+  author={Kiwhan Song and Boyuan Chen and Max Simchowitz and Yilun Du and Russ Tedrake and Vincent Sitzmann},
+  year={2025},
+  eprint={2502.06764},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2502.06764}, 
+}
+              </pre>
+            </div>
+            <p style="text-align: justify">
+              <i id="history_guidance_abs"
+                >Classifier-free guidance (CFG) is a key technique for improving
+                conditional generation in diffusion models, enabling more
+                accurate control while enhancing sample quality. It is natural
+                to extend this technique to video diffusion, which generates
+                video conditioned on a variable number of context frames,
+                collectively referred to as history. However, we find two key
+                challenges to guiding with variable-length history:
+                architectures that only support fixed-size conditioning, and the
+                empirical observation that CFG-style history dropout performs
+                poorly. To address this, we propose the Diffusion Forcing
+                Transformer (DFoT), a video diffusion architecture and
+                theoretically grounded training objective that jointly enable
+                conditioning on a flexible number of history frames. We then
+                introduce History Guidance, a family of guidance methods
+                uniquely enabled by DFoT. We show that its simplest form,
+                vanilla history guidance, already significantly improves video
+                generation quality and temporal consistency. A more advanced
+                method, history guidance across time and frequency further
+                enhances motion dynamics, enables compositional generalization
+                to out-of-distribution history, and can stably roll out
+                extremely long videos.</i
+              >
+            </p>
+          </div>
+        </div>
+
         <!--Paper 8 -->
         <div class="row">
           <div class="col-md-4">
@@ -340,7 +420,7 @@
               <a href="https://boyuan.space/diffusion-forcing/">
                 <img
                   loading="lazy"
-                  src="images/research/df.png"
+                  src="images/research/df.webp"
                   alt="paper thumbnail"
                   width="504"
                   height="300" />
@@ -718,7 +798,7 @@
                 yet locally consistent segments in the demonstrations (e.g.,
                 wiping sweat while cutting potatoes in a cooking tutorial). We
                 argue that such noise is common in real world data and term them
-                as “extraneous” segments. To tackle this problem, we introduce
+                as "extraneous" segments. To tackle this problem, we introduce
                 Extraneousness-Aware Imitation Learning (EIL), a self-supervised
                 approach that learns visuomotor policies from third-person
                 demonstrations with extraneous subsequences. EIL learns
@@ -1654,6 +1734,7 @@
 
     <!--Hide paper abstract by default-->
     <script xml:space="preserve">
+      hideblock("history_guidance_abs");
       hideblock("df_abs");
       hideblock("dittogym_abs");
       hideblock("spatialvlm_abs");

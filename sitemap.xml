@@ -25,7 +25,7 @@
 <url>
   <loc>https://boyuan.space/blogs/boba_ranking.html</loc>
   <lastmod>2024-07-01T05:49:05+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.50</priority>
 </url>
 <url>
   <loc>https://boyuan.space/blogs/jushenzhineng.html</loc>
@@ -49,6 +49,11 @@
 </url>
 <url>
   <loc>https://boyuan.space/diffusion-forcing/</loc>
+  <lastmod>2024-07-01T05:49:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://boyuan.space/history-guidance/</loc>
   <lastmod>2024-07-01T05:49:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
