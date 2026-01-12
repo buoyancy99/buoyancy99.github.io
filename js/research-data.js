@@ -28,6 +28,74 @@
   /** @type {ResearchPaper[]} */
   window.RESEARCH_PAPERS = [
     {
+      id: "df",
+      selected: true,
+      title: "Diffusion Forcing: Next-token Prediction Meets Full-Sequence Diffusion",
+      website: "https://boyuan.space/diffusion-forcing/",
+      thumbnail: {
+        src: "images/research/df.webp",
+        alt: "Diffusion Forcing paper thumbnail",
+        width: 504,
+        height: 300,
+        href: "https://boyuan.space/diffusion-forcing/",
+      },
+      authorsHtml:
+        "Boyuan Chen, Diego Marti Monso, Yilun Du, Max Simchowitz, Russ Tedrake, Vincent Sitzmann",
+      venueHtml:
+        "<strong>NeurIPS 2024</strong> (Conference of Neural Information Processing Systems)",
+      links: [
+        { label: "website", href: "https://boyuan.space/diffusion-forcing/" },
+        { label: "paper", href: "https://arxiv.org/abs/2407.01392" },
+        { label: "abstract", href: "#", onClick: "abstract" },
+        { label: "bibtex", href: "#", onClick: "bibtex" },
+      ],
+      abstractHtml:
+        "This paper presents Diffusion Forcing, a new training paradigm where a diffusion model is trained to denoise a set of tokens with independent per-token noise levels. We apply Diffusion Forcing to sequence generative modeling by training a causal next-token prediction model to generate one or several future tokens without fully diffusing past ones. Our approach is shown to combine the strengths of next-token prediction models, such as variable-length generation, with the strengths of full-sequence diffusion models, such as the ability to guide sampling to desirable trajectories. Our method offers a range of additional capabilities, such as (1) rolling-out sequences of continuous tokens, such as video, with lengths past the training horizon, where baselines diverge and (2) new sampling and guiding schemes that uniquely profit from Diffusion Forcing's variable-horizon and causal architecture, and which lead to marked performance gains in decision-making and planning tasks. In addition to its empirical success, our method is proven to optimize a variational lower bound on the likelihoods of all subsequences of tokens drawn from the true joint distribution.",
+      bibtex: `@article{chen2025diffusion,
+  title={Diffusion forcing: Next-token prediction meets full-sequence diffusion},
+  author={Chen, Boyuan and Mart{\\'\\i} Mons{\\'o}, Diego and Du, Yilun and Simchowitz, Max and Tedrake, Russ and Sitzmann, Vincent},
+  journal={Advances in Neural Information Processing Systems},
+  volume={37},
+  pages={24081--24125},
+  year={2025}
+}`,
+    },
+
+    {
+      id: "spatialvlm",
+      selected: true,
+      title: "SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities",
+      website: "https://spatial-vlm.github.io/",
+      thumbnail: {
+        src: "images/research/spatial_vlm.jpg",
+        alt: "SpatialVLM paper thumbnail",
+        width: 504,
+        height: 300,
+        href: "https://spatial-vlm.github.io/",
+      },
+      authorsHtml:
+        "Boyuan Chen, Zhuo Xu, Sean Kirmani, Brian Ichter, Danny Driess, Pete Florence, Dorsa Sadigh, Leonidas Guibas, Fei Xia",
+      venueHtml:
+        "<strong>CVPR 2024</strong> (Conference on Computer Vision and Pattern Recognition)",
+      links: [
+        { label: "website", href: "https://spatial-vlm.github.io/" },
+        { label: "paper", href: "https://arxiv.org/abs/2401.12168" },
+        { label: "abstract", href: "#", onClick: "abstract" },
+        { label: "bibtex", href: "#", onClick: "bibtex" },
+      ],
+      abstractHtml:
+        "Understanding and reasoning about spatial relationships is a fundamental capability for Visual Question Answering (VQA) and robotics. While Vision Language Models (VLM) have demonstrated remarkable performance in certain VQA benchmarks, they still lack capabilities in 3D spatial reasoning, such as recognizing quantitative relationships of physical objects like distances or size differences. We hypothesize that VLMs' limited spatial reasoning capability is due to the lack of 3D spatial knowledge in training data and aim to solve this problem by training VLMs with Internet-scale spatial reasoning data. To this end, we present a system to facilitate this approach. We first develop an automatic 3D spatial VQA data generation framework that scales up to 2 billion VQA examples on 10 million real-world images. We then investigate various factors in the training recipe, including data quality, training pipeline, and VLM architecture. Our work features the first internet-scale 3D spatial reasoning dataset in metric space. By training a VLM on such data, we significantly enhance its ability on both qualitative and quantitative spatial VQA. Finally, we demonstrate that this VLM unlocks novel downstream applications in chain-of-thought spatial reasoning and robotics due to its quantitative estimation capability.",
+      bibtex: `@InProceedings{Chen_2024_CVPR,
+    author    = {Chen, Boyuan and Xu, Zhuo and Kirmani, Sean and Ichter, Brain and Sadigh, Dorsa and Guibas, Leonidas and Xia, Fei},
+    title     = {SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2024},
+    pages     = {14455-14465}
+}`,
+    },
+
+    {
       id: "lvp",
       selected: true,
       title: "Large Video Planner Enables Generalizable Robot Control",
@@ -61,6 +129,7 @@
   url={http://arxiv.org/abs/2512.15840},
 }`,
     },
+
     {
       id: "history_guidance",
       selected: true,
@@ -96,134 +165,7 @@
   url={https://arxiv.org/abs/2502.06764},
 }`,
     },
-    {
-      id: "df",
-      selected: true,
-      title: "Diffusion Forcing: Next-token Prediction Meets Full-Sequence Diffusion",
-      website: "https://boyuan.space/diffusion-forcing/",
-      thumbnail: {
-        src: "images/research/df.webp",
-        alt: "Diffusion Forcing paper thumbnail",
-        width: 504,
-        height: 300,
-        href: "https://boyuan.space/diffusion-forcing/",
-      },
-      authorsHtml:
-        "Boyuan Chen, Diego Marti Monso, Yilun Du, Max Simchowitz, Russ Tedrake, Vincent Sitzmann",
-      venueHtml:
-        "<strong>NeurIPS 2024</strong> (Conference of Neural Information Processing Systems)",
-      links: [
-        { label: "website", href: "https://boyuan.space/diffusion-forcing/" },
-        { label: "paper", href: "https://arxiv.org/abs/2407.01392" },
-        { label: "abstract", href: "#", onClick: "abstract" },
-        { label: "bibtex", href: "#", onClick: "bibtex" },
-      ],
-      abstractHtml:
-        "This paper presents Diffusion Forcing, a new training paradigm where a diffusion model is trained to denoise a set of tokens with independent per-token noise levels. We apply Diffusion Forcing to sequence generative modeling by training a causal next-token prediction model to generate one or several future tokens without fully diffusing past ones. Our approach is shown to combine the strengths of next-token prediction models, such as variable-length generation, with the strengths of full-sequence diffusion models, such as the ability to guide sampling to desirable trajectories. Our method offers a range of additional capabilities, such as (1) rolling-out sequences of continuous tokens, such as video, with lengths past the training horizon, where baselines diverge and (2) new sampling and guiding schemes that uniquely profit from Diffusion Forcing's variable-horizon and causal architecture, and which lead to marked performance gains in decision-making and planning tasks. In addition to its empirical success, our method is proven to optimize a variational lower bound on the likelihoods of all subsequences of tokens drawn from the true joint distribution.",
-      bibtex: `@article{chen2025diffusion,
-  title={Diffusion forcing: Next-token prediction meets full-sequence diffusion},
-  author={Chen, Boyuan and Mart{\\'\\i} Mons{\\'o}, Diego and Du, Yilun and Simchowitz, Max and Tedrake, Russ and Sitzmann, Vincent},
-  journal={Advances in Neural Information Processing Systems},
-  volume={37},
-  pages={24081--24125},
-  year={2025}
-}`,
-    },
-    {
-      id: "spatialvlm",
-      selected: true,
-      title: "SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities",
-      website: "https://spatial-vlm.github.io/",
-      thumbnail: {
-        src: "images/research/spatial_vlm.jpg",
-        alt: "SpatialVLM paper thumbnail",
-        width: 504,
-        height: 300,
-        href: "https://spatial-vlm.github.io/",
-      },
-      authorsHtml:
-        "Boyuan Chen, Zhuo Xu, Sean Kirmani, Brian Ichter, Danny Driess, Pete Florence, Dorsa Sadigh, Leonidas Guibas, Fei Xia",
-      venueHtml:
-        "<strong>CVPR 2024</strong> (Conference on Computer Vision and Pattern Recognition)",
-      links: [
-        { label: "website", href: "https://spatial-vlm.github.io/" },
-        { label: "paper", href: "https://arxiv.org/abs/2401.12168" },
-        { label: "abstract", href: "#", onClick: "abstract" },
-        { label: "bibtex", href: "#", onClick: "bibtex" },
-      ],
-      abstractHtml:
-        "Understanding and reasoning about spatial relationships is a fundamental capability for Visual Question Answering (VQA) and robotics. While Vision Language Models (VLM) have demonstrated remarkable performance in certain VQA benchmarks, they still lack capabilities in 3D spatial reasoning, such as recognizing quantitative relationships of physical objects like distances or size differences. We hypothesize that VLMs' limited spatial reasoning capability is due to the lack of 3D spatial knowledge in training data and aim to solve this problem by training VLMs with Internet-scale spatial reasoning data. To this end, we present a system to facilitate this approach. We first develop an automatic 3D spatial VQA data generation framework that scales up to 2 billion VQA examples on 10 million real-world images. We then investigate various factors in the training recipe, including data quality, training pipeline, and VLM architecture. Our work features the first internet-scale 3D spatial reasoning dataset in metric space. By training a VLM on such data, we significantly enhance its ability on both qualitative and quantitative spatial VQA. Finally, we demonstrate that this VLM unlocks novel downstream applications in chain-of-thought spatial reasoning and robotics due to its quantitative estimation capability.",
-      bibtex: `@InProceedings{Chen_2024_CVPR,
-    author    = {Chen, Boyuan and Xu, Zhuo and Kirmani, Sean and Ichter, Brain and Sadigh, Dorsa and Guibas, Leonidas and Xia, Fei},
-    title     = {SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = {June},
-    year      = {2024},
-    pages     = {14455-14465}
-}`,
-    },
-    {
-      id: "dittogym",
-      title: "DittoGym: Learning to Control Soft Shape-Shifting Robots",
-      website: "https://dittogym.github.io/",
-      thumbnail: {
-        src: "images/research/ditto.jpg",
-        alt: "DittoGym paper thumbnail",
-        width: 504,
-        height: 300,
-        href: "https://dittogym.github.io/",
-      },
-      authorsHtml: "Suning Huang, Boyuan Chen, Huazhe Xu, Vincent Sitzmann",
-      venueHtml:
-        "<strong>ICLR 2024</strong> (International Conference on Learning Representations)",
-      links: [
-        { label: "website", href: "https://dittogym.github.io/" },
-        { label: "paper", href: "https://arxiv.org/abs/2401.13231" },
-        { label: "abstract", href: "#", onClick: "abstract" },
-        { label: "bibtex", href: "#", onClick: "bibtex" },
-      ],
-      abstractHtml:
-        "Robot co-design, where the morphology of a robot is optimized jointly with a learned policy to solve a specific task, is an emerging area of research. It holds particular promise for soft robots, which are amenable to novel manufacturing techniques that can realize learned morphologies and actuators. Inspired by nature and recent novel robot designs, we propose to go a step further and explore the novel reconfigurable robots, defined as robots that can change their morphology within their lifetime. We formalize control of reconfigurable soft robots as a highdimensional reinforcement learning (RL) problem. We unify morphology change, locomotion, and environment interaction in the same action space, and introduce an appropriate, coarse-to-fine curriculum that enables us to discover policies that accomplish fine-grained control of the resulting robots. We also introduce DittoGym, a comprehensive RL benchmark for reconfigurable soft robots that require fine-grained morphology changes to accomplish the tasks. Finally, we evaluate our proposed coarse-to-fine algorithm on DittoGym and demonstrate robots that learn to change their morphology several times within a sequence, uniquely enabled by our RL algorithm.",
-      bibtex: `@misc{huang2024dittogym,
-  title={DittoGym: Learning to Control Soft Shape-Shifting Robots},
-  author={Suning Huang and Boyuan Chen and Huazhe Xu and Vincent Sitzmann},
-  year={2024},
-  eprint={2401.13231},
-  archivePrefix={arXiv},
-  primaryClass={cs.RO}
-}`,
-    },
-    {
-      id: "ramp",
-      title: "Self-Supervised Reinforcement Learning that Transfers using Random Features",
-      website: "https://buoyancy99.github.io/ramp-rl/",
-      thumbnail: {
-        src: "images/research/ramp.jpg",
-        alt: "RAMP paper thumbnail",
-        width: 504,
-        height: 300,
-        href: "https://buoyancy99.github.io/ramp-rl/",
-      },
-      authorsHtml:
-        "Boyuan Chen, Chuning Zhu, Pulkit Agrawal, Kaiqing Zhang, Abhishek Gupta",
-      venueHtml:
-        "<strong>NeurIPS 2023</strong> (Conference of Neural Information Processing Systems)",
-      links: [
-        { label: "website", href: "https://buoyancy99.github.io/ramp-rl/" },
-        { label: "paper", href: "https://arxiv.org/abs/2305.17250" },
-        { label: "abstract", href: "#", onClick: "abstract" },
-        { label: "bibtex", href: "#", onClick: "bibtex" },
-      ],
-      abstractHtml:
-        "Reinforcement learning (RL) algorithms have the potential not only for synthesizing complex control behaviors, but also for transfer across tasks. Model-free RL excels in solving problems with high-dimensional observations or long horizons, but the learned policies do not transfer across different reward functions. Model-based RL, on the other hand, naturally enables transfer across different reward functions, but struggles in complex environments due to compounding error. In this work, we propose a new method for transferring behaviors across tasks with different rewards, combining the performance of model-free RL with the transferability of model-based RL. In particular, we show how model-free RL using a number of random features as the reward allows for implicit modeling of long-horizon environment dynamics. Model-predictive control using these implicit models enables fast adaptation to problems with new reward functions while avoiding the compounding error from model rollouts. Our method can be trained on offline datasets without reward labels, and quickly deployed on new tasks, making it more widely applicable than typical RL methods. We validate that our proposed method enables transfer across tasks on a variety of manipulation and locomotion domains.",
-      bibtex: `@article{chen2024self,
-  title={Self-supervised reinforcement learning that transfers using random features},
-  author={Chen, Boyuan and Zhu, Chuning and Agrawal, Pulkit and Zhang, Kaiqing and Gupta, Abhishek},
-  journal={Advances in Neural Information Processing Systems},
-  volume={36},
-  year={2024}
-}`,
-    },
+
     {
       id: "nlmap",
       selected: true,
@@ -258,6 +200,71 @@
   organization={IEEE}
 }`,
     },
+
+    {
+      id: "dittogym",
+      title: "DittoGym: Learning to Control Soft Shape-Shifting Robots",
+      website: "https://dittogym.github.io/",
+      thumbnail: {
+        src: "images/research/ditto.jpg",
+        alt: "DittoGym paper thumbnail",
+        width: 504,
+        height: 300,
+        href: "https://dittogym.github.io/",
+      },
+      authorsHtml: "Suning Huang, Boyuan Chen, Huazhe Xu, Vincent Sitzmann",
+      venueHtml:
+        "<strong>ICLR 2024</strong> (International Conference on Learning Representations)",
+      links: [
+        { label: "website", href: "https://dittogym.github.io/" },
+        { label: "paper", href: "https://arxiv.org/abs/2401.13231" },
+        { label: "abstract", href: "#", onClick: "abstract" },
+        { label: "bibtex", href: "#", onClick: "bibtex" },
+      ],
+      abstractHtml:
+        "Robot co-design, where the morphology of a robot is optimized jointly with a learned policy to solve a specific task, is an emerging area of research. It holds particular promise for soft robots, which are amenable to novel manufacturing techniques that can realize learned morphologies and actuators. Inspired by nature and recent novel robot designs, we propose to go a step further and explore the novel reconfigurable robots, defined as robots that can change their morphology within their lifetime. We formalize control of reconfigurable soft robots as a highdimensional reinforcement learning (RL) problem. We unify morphology change, locomotion, and environment interaction in the same action space, and introduce an appropriate, coarse-to-fine curriculum that enables us to discover policies that accomplish fine-grained control of the resulting robots. We also introduce DittoGym, a comprehensive RL benchmark for reconfigurable soft robots that require fine-grained morphology changes to accomplish the tasks. Finally, we evaluate our proposed coarse-to-fine algorithm on DittoGym and demonstrate robots that learn to change their morphology several times within a sequence, uniquely enabled by our RL algorithm.",
+      bibtex: `@misc{huang2024dittogym,
+  title={DittoGym: Learning to Control Soft Shape-Shifting Robots},
+  author={Suning Huang and Boyuan Chen and Huazhe Xu and Vincent Sitzmann},
+  year={2024},
+  eprint={2401.13231},
+  archivePrefix={arXiv},
+  primaryClass={cs.RO}
+}`,
+    },
+
+    {
+      id: "ramp",
+      title: "Self-Supervised Reinforcement Learning that Transfers using Random Features",
+      website: "https://buoyancy99.github.io/ramp-rl/",
+      thumbnail: {
+        src: "images/research/ramp.jpg",
+        alt: "RAMP paper thumbnail",
+        width: 504,
+        height: 300,
+        href: "https://buoyancy99.github.io/ramp-rl/",
+      },
+      authorsHtml:
+        "Boyuan Chen, Chuning Zhu, Pulkit Agrawal, Kaiqing Zhang, Abhishek Gupta",
+      venueHtml:
+        "<strong>NeurIPS 2023</strong> (Conference of Neural Information Processing Systems)",
+      links: [
+        { label: "website", href: "https://buoyancy99.github.io/ramp-rl/" },
+        { label: "paper", href: "https://arxiv.org/abs/2305.17250" },
+        { label: "abstract", href: "#", onClick: "abstract" },
+        { label: "bibtex", href: "#", onClick: "bibtex" },
+      ],
+      abstractHtml:
+        "Reinforcement learning (RL) algorithms have the potential not only for synthesizing complex control behaviors, but also for transfer across tasks. Model-free RL excels in solving problems with high-dimensional observations or long horizons, but the learned policies do not transfer across different reward functions. Model-based RL, on the other hand, naturally enables transfer across different reward functions, but struggles in complex environments due to compounding error. In this work, we propose a new method for transferring behaviors across tasks with different rewards, combining the performance of model-free RL with the transferability of model-based RL. In particular, we show how model-free RL using a number of random features as the reward allows for implicit modeling of long-horizon environment dynamics. Model-predictive control using these implicit models enables fast adaptation to problems with new reward functions while avoiding the compounding error from model rollouts. Our method can be trained on offline datasets without reward labels, and quickly deployed on new tasks, making it more widely applicable than typical RL methods. We validate that our proposed method enables transfer across tasks on a variety of manipulation and locomotion domains.",
+      bibtex: `@article{chen2024self,
+  title={Self-supervised reinforcement learning that transfers using random features},
+  author={Chen, Boyuan and Zhu, Chuning and Agrawal, Pulkit and Zhang, Kaiqing and Gupta, Abhishek},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  year={2024}
+}`,
+    },
+
     {
       id: "keypoint3D",
       title: "Unsupervised Learning of Visual 3D Keypoints for Control",
@@ -297,6 +304,7 @@
   organization={PMLR}
 }`,
     },
+
     {
       id: "sap",
       title:
@@ -330,6 +338,7 @@
   organization={IEEE}
 }`,
     },
+
     {
       id: "rpg",
       title: "Discovering Diverse Multi-agent Strategic Behavior via Reward Randomization",
@@ -363,6 +372,7 @@
     primaryClass={cs.AI}
 }`,
     },
+
   ];
 })();
 
