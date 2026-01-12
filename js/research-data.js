@@ -14,6 +14,7 @@
    * @typedef {Object} ResearchPaper
    * @property {string} id - Unique id used for bibtex toggle and abstract toggle
    * @property {string} title
+   * @property {boolean} [selected] - If true, show on homepage "Selected Publications"
    * @property {string} [website] - Primary project/paper website
    * @property {{src:string, alt:string, width:number, height:number, href?:string}} thumbnail
    * @property {string} authorsHtml - HTML allowed for e.g. <strong>*</strong>
@@ -27,7 +28,42 @@
   /** @type {ResearchPaper[]} */
   window.RESEARCH_PAPERS = [
     {
+      id: "lvp",
+      selected: true,
+      title: "Large Video Planner Enables Generalizable Robot Control",
+      website: "https://www.boyuan.space/large-video-planner/",
+      thumbnail: {
+        src: "images/research/lvp.webp",
+        alt: "Large Video Planner paper thumbnail",
+        width: 504,
+        height: 300,
+        href: "https://www.boyuan.space/large-video-planner/",
+      },
+      authorsHtml:
+        "Boyuan Chen<strong>*</strong>, Tianyuan Zhang<strong>*</strong>, Haoran Geng<strong>*</strong>, Kiwhan Song, Caiyi Zhang, Peihao Li, William T. Freeman, Jitendra Malik, Pieter Abbeel, Russ Tedrake, Vincent Sitzmann, Yilun Du",
+      noteHtml: "<strong>*</strong> Equal contribution",
+      venueHtml: "<strong>arXiv 2025</strong>",
+      links: [
+        { label: "website", href: "https://www.boyuan.space/large-video-planner/" },
+        { label: "paper", href: "http://arxiv.org/abs/2512.15840" },
+        { label: "abstract", href: "#", onClick: "abstract" },
+        { label: "bibtex", href: "#", onClick: "bibtex" },
+      ],
+      abstractHtml:
+        "General-purpose robots require decision-making models that generalize across diverse tasks and environments. Recent works build robot foundation models by extending multimodal large language models (MLLMs) with action outputs, creating vision-language-action (VLA) systems. These efforts are motivated by the intuition that MLLMs' large-scale language and image pretraining can be effectively transferred to the action output modality. In this work, we explore an alternative paradigm of using large-scale video pretraining as a primary modality for building robot foundation models. Unlike static images and language, videos capture spatio-temporal sequences of states and actions in the physical world that are naturally aligned with robotic behavior. We curate an internet-scale video dataset of human activities and task demonstrations, and train, for the first time at a foundation-model scale, an open video model for generative robotics planning. The model produces zero-shot video plans for novel scenes and tasks, which we post-process to extract executable robot actions. We evaluate task-level generalization through third-party selected tasks in the wild and real-robot experiments, demonstrating successful physical execution. Together, these results show robust instruction following, strong generalization, and real-world feasibility. We release both the model and dataset to support open, reproducible video-based robot learning.",
+      bibtex: `@misc{chen2025largevideoplanner,
+  title={Large Video Planner},
+  author={Boyuan Chen and Tianyuan Zhang and Haoran Geng and Kiwhan Song and William T. Freeman and Jitendra Malik and Russ Tedrake and Vincent Sitzmann and Yilun Du},
+  year={2025},
+  eprint={2512.15840},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={http://arxiv.org/abs/2512.15840},
+}`,
+    },
+    {
       id: "history_guidance",
+      selected: true,
       title: "History-Guided Video Diffusion",
       website: "https://boyuan.space/history-guidance/",
       thumbnail: {
@@ -62,6 +98,7 @@
     },
     {
       id: "df",
+      selected: true,
       title: "Diffusion Forcing: Next-token Prediction Meets Full-Sequence Diffusion",
       website: "https://boyuan.space/diffusion-forcing/",
       thumbnail: {
@@ -94,6 +131,7 @@
     },
     {
       id: "spatialvlm",
+      selected: true,
       title: "SpatialVLM: Endowing Vision-Language Models with Spatial Reasoning Capabilities",
       website: "https://spatial-vlm.github.io/",
       thumbnail: {
@@ -188,6 +226,7 @@
     },
     {
       id: "nlmap",
+      selected: true,
       title: "Open-vocabulary Queryable Scene Representations for Real World Planning",
       website: "https://nlmap-saycan.github.io/",
       thumbnail: {

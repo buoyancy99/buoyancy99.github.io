@@ -34,20 +34,18 @@ $(window).on("load", function () {
   }, 0); // since we disabled preloader for now, we can set this to 0
 
   /*======== Load order ========*/
-  var navBar = document.getElementById('navbar');
-  navBar.style.display = '';
-  var bannerSection = document.getElementById('home');
-  bannerSection.style.display = 'block';
-  var aboutSection = document.getElementById('about');
-  aboutSection.style.display = '';
-  var researchSection = document.getElementById('research');
-  researchSection.style.display = '';
-  var portfolioSection = document.getElementById('portfolio');
-  portfolioSection.style.display = '';
-  var blogSection = document.getElementById('blogs');
-  blogSection.style.display = '';
-  var footer = document.getElementById('footer')
-  footer.style.display = '';
+  function setDisplayById(id, value) {
+    var el = document.getElementById(id);
+    if (el) el.style.display = value;
+  }
+
+  setDisplayById("navbar", "");
+  setDisplayById("home", "block");
+  setDisplayById("about", "");
+  setDisplayById("research", "");
+  setDisplayById("portfolio", "");
+  setDisplayById("blogs", "");
+  setDisplayById("footer", "");
 
   /*========Portfolio Isotope Setup========*/
   if ($(".portfolio-items").length) {

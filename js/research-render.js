@@ -117,9 +117,21 @@
   /**
    * Public entrypoint. Called from `index.html`.
    */
-  window.renderResearchPapers = function renderResearchPapers() {
-    const mount = document.getElementById("research-papers");
-    renderResearchPapersInto(mount, window.RESEARCH_PAPERS);
+  window.renderResearchPapers = function renderResearchPapers(options) {
+    const opts = options || {};
+    const mountId = opts.mountId || "research-papers";
+    const onlySelected = Boolean(opts.onlySelected);
+
+    const all = Array.isArray(opts.papers)
+      ? opts.papers
+      : Array.isArray(window.RESEARCH_PAPERS)
+        ? window.RESEARCH_PAPERS
+        : [];
+
+    const list = onlySelected ? all.filter((p) => p && p.selected) : all;
+
+    const mount = document.getElementById(mountId);
+    renderResearchPapersInto(mount, list);
   };
 })();
 

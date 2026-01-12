@@ -336,13 +336,22 @@
         <div class="row">
           <div class="col">
             <div class="heading text-center">
-              <h2>My research</h2>
+              <h2>Selected Publications</h2>
             </div>
           </div>
         </div>
 
         <!-- Rendered by js/research-data.js + js/research-render.js -->
         <div id="research-papers"></div>
+        <div class="row">
+          <div class="col text-center">
+            <div class="blog-button pt-40">
+              <a class="main-btn" href="publications.html"
+                >View full publication list</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!--Research Section End-->
@@ -942,7 +951,8 @@
     <script src="js/research-data.js"></script>
     <script src="js/research-render.js"></script>
     <script>
-      if (window.renderResearchPapers) window.renderResearchPapers();
+      if (window.renderResearchPapers)
+        window.renderResearchPapers({ onlySelected: true });
     </script>
   </body>
 </html>
